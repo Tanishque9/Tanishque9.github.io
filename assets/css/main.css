@@ -45,6 +45,36 @@ blockquote, q {
 		content: '';
 		content: none;
 	}
+	.container {
+		display: inline-block;
+		cursor: pointer;
+	  }
+	  
+	  .bar1, .bar2, .bar3 {
+		width: 35px;
+		height: 5px;
+		background-color: #333;
+		margin: 6px 0;
+		transition: 0.4s;
+	  }
+	  
+	  /* Rotate first bar */
+	  .change .bar1 {
+		-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+		transform: rotate(-45deg) translate(-9px, 6px) ;
+	  }
+	  
+	  /* Fade out the second bar */
+	  .change .bar2 {
+		opacity: 0;
+	  }
+	  
+	  /* Rotate last bar */
+	  .change .bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+		transform: rotate(45deg) translate(-8px, -8px) ;
+	  }
+
 
 table {
 	border-collapse: collapse;
@@ -96,6 +126,7 @@ input, select, textarea {
 			-ms-transition: none !important;
 			transition: none !important;
 		}
+		
 
 	body, input, select, textarea {
 		color: #a2a2a2;
@@ -104,6 +135,32 @@ input, select, textarea {
 		font-weight: 400;
 		line-height: 1.75em;
 	}
+	
+
+		.icon-bar {
+		  float: right;
+		  width: 40%;
+		  background-color: rgb(198, 200, 241);
+		  overflow: auto;
+		}
+		
+		.icon-bar a {
+		  float: left;
+		  width: 33.33%;
+		  text-align: center;
+		  padding: 12px 0;
+		  transition: all 0.3s ease;
+		  color: white;
+		  font-size: 18px;
+		}
+		
+		.icon-bar a:hover {
+		  background-color: #000;
+		}
+		
+		.active {
+		  background-color: #04AA6D;
+		}
 
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -150,6 +207,7 @@ input, select, textarea {
 		font-size: 2em;
 		line-height: 1.5em;
 	}
+	
 
 	h2 {
 		font-size: 1.5em;
